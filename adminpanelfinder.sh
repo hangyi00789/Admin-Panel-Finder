@@ -24,7 +24,7 @@ read -p $'\e[1;31m Target site==> \e[0m' site
 result1=$(curl -IKs $site | grep "HTTP/")
 echo $result1
 res1=$(echo "$result1" | grep -o '[200]\+')
-while IFS=read -r path
+while IFS= read -r path
 do
 
 result=$(curl -IKs $site/$path | grep "HTTP/")
