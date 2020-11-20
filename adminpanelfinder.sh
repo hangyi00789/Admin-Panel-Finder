@@ -30,7 +30,7 @@ do
 result=$(curl -IKs $site/$path | grep "HTTP/")
 echo $result
 res=$(echo "$result" | grep -o '[200]\+')
-echo -e "\e[1;37m Scanning site:: $site/$path \e[0m"
+echo -e "\e[1;35m Scanning site:: $site/$path \e[0m"
 if [[ $res1 == $res ]];then
 echo -e "\e[1;35m Admin Panel Found:: $site/$path \e[0m"
 else
