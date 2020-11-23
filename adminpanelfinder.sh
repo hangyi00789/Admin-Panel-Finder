@@ -33,6 +33,7 @@ res=$(echo "$result" | grep -o '[200]\+')
 echo -e "\e[1;35m Scanning site:: $site/$path \e[0m"
 if [[ $res1 == $res ]];then
 echo -e "\e[1;35m Admin Panel Found:: $site/$path \e[0m"
+exit
 else
 echo -e "\e[1;31m Not found admin panel \e[0m"
 fi 
