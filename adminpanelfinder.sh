@@ -19,7 +19,7 @@ echo ""
 echo -e "\e[1;33m Coder    : \e[1;35m Z847HG,RH4P50DY \e[0m"
 echo -e '\e[1;33m Page link: \e[1;35m https://www.facebook.com/BurmeseDemomForce/ \e[0m'
 echo ""
-password=BurmeseDemomForce
+password=BurmeseDemonForce
 read -sp $'\e[1;31m Enter Tool password:: \e[0m' pass
 if [ $pass == $password ];then
 clear
@@ -44,17 +44,16 @@ echo ""
 echo -e "\e[1;33m Coder    : \e[1;35m Z847HG,RH4P50DY \e[0m"
 echo -e '\e[1;33m Page link: \e[1;35m https://www.facebook.com/BurmeseDemomForce/ \e[0m'
 echo ""
-http="HTTP/1.1 200 ok"
 read -p $'\e[1;31m Target site==> \e[0m' site
-result1=$(curl -IKs $site | grep "HTTP/")
+result1=$(curl -IKs $site)
 echo $result1
-res1=$(echo "$result1" | grep -o '[200]\+')
+res1=$(echo "$result1")
 while IFS= read -r path
 do
 
-result=$(curl -IKs $site/$path | grep "HTTP/")
+result=$(curl -IKs $site/$path)
 echo $result
-res=$(echo "$result" | grep -o '[200]\+')
+res=$(echo "$result")
 echo -e "\e[1;35m Scanning site:: $site/$path \e[0m"
 if [[ $res1 == $res ]];then
 echo -e "\e[1;35m Admin Panel Found:: $site/$path \e[0m"
