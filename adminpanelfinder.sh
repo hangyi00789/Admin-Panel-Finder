@@ -44,6 +44,7 @@ echo ""
 echo -e "\e[1;33m Coder    : \e[1;35m Z847HG,RH4P50DY \e[0m"
 echo -e '\e[1;33m Page link: \e[1;35m https://www.facebook.com/BurmeseDemomForce/ \e[0m'
 echo ""
+echo -e "\e[1;35m Ex:https://google.com \e[0m"
 http="HTTP/1.1 200 ok"
 read -p $'\e[1;31m Target site==> \e[0m' site
 result1=$(curl -IKs $site | grep "HTTP/")
